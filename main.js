@@ -13,7 +13,8 @@ function edate(dater){
 
  function enterv(inval){
     let formattedNumbers = inval.split('\n').map(number => "+91" + number + ",").join('\n');
-    let link = document.querySelector("#sms").href = `sms:${formattedNumbers}`
+    let msg = document.querySelector("#vale").innerText;
+    let link = document.querySelector("#sms").href = `sms:${formattedNumbers.slice(0,length-1)};?&body=${msg}`
  }      
     
 function copy(){
