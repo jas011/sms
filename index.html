@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="section">
+    <div class="container">
+    <div class="phone">
+        <h1 class="ph">Phone no.</h1>
+        <textarea maxlength="219" type="text" name="" id="numbers" oninput="enterv(this.value)"></textarea>
+    </div>
+    <div class="note">  
+        <h1 class="title">Note:</h1>
+        <p class="ins">Mobile numbers Should not be more than 20<br>
+        One number in each line eg.<br>
+        98142xxxxx<br>
+        98146xxxxx<br>
+        ....<br>
+        ...
+        </p>
+    </div>
+    <div class="message">
+        <h1 id="message">Message</h1>
+        <div class="content">
+            <h1 id="vale">Dear customer, Pollution Certificate expire date <span id="expdate "></span> VISHWAKARMA POLLUTION CENTRE NEAR DYAL SWEET GILL ROAD CONTACT TARSEM FOR 3RD PARTY INSURANCE 9915981591</h1>
+            <div class="btns"><input id="search" type="date" size="30" value="null" onchange="edate(this.value)">
+                <button onclick="copy()" id="copy">Copy</button>
+            </div>
+        </div>
+    </div>
+</div>
+    <div class="sms"><button id="sbut"><a id="sms">SMS</a></button></div>
+</div>
+<script src="main.js"></script>
+<script type="text/javascript" src="jquery.plugin.js"></script>
+<script type="text/javascript" src="jquery.maxlength.js"></script>
+<script>
+    $(function() {
+        $('#numbers').maxlength({
+            showFeedback: true,
+            feedbackText: '{c} / {m} max.', 
+            overflowText: '{c} / {m} max!', 
+            feedbackTarget: '#targetFeedback$name',
+            max: $max_length,
+            truncate: false,
+            onFull: null
+        }); 
+    });
+</script>
+</body>
+</html>
