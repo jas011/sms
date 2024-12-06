@@ -6,17 +6,19 @@ function cdate(date){
 }
 
 
+
+let formattedNumbers = 0;
+ function enterv(inval){
+     formattedNumbers = inval.split('\n').map(number => "+91" + number + ",").join('\n');
+ }      
+
 function edate(dater){
     const expDate = cdate(dater);
     document.getElementById("expdate ").innerHTML= expDate;
+   let msg = document.querySelector("#vale").innerText;
+    let link = document.querySelector("#sms").href = `sms:${formattedNumbers.slice(0,length-1)};?&body=${msg}`;
 }
 
- function enterv(inval){
-    let formattedNumbers = inval.split('\n').map(number => "+91" + number + ",").join('\n');
-    let msg = document.querySelector("#vale").innerText;
-    let link = document.querySelector("#sms").href = `sms:${formattedNumbers.slice(0,length-1)};?&body=${msg}`
- }      
-    
 function copy(){
     console.log(daterc.value)
     if(daterc.value){
